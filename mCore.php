@@ -37,4 +37,35 @@ if ( ! defined( 'WPINC' ) ) {
  */
 define( 'MCORE_VERSION', '1.0.0' );
 
+add_action( 'init', 'github_plugin_updater_test_init' );
+function github_plugin_updater_test_init() {
+
+	include_once 'inc/updater.php';
+
+	define( 'WP_GITHUB_FORCE_UPDATE', true );
+
+	if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+
+		$config = array(
+			'slug' => plugin_basename( __FILE__ ),
+			'proper_folder_name' => 'mCore',
+			'api_url' => 'https://api.github.com/repos/ivo-ivanov/mCore',
+			'raw_url' => 'https://raw.github.com/ivo-ivanov/mCore/master',
+			'github_url' => 'https://github.com/ivo-ivanov/mCore',
+			'zip_url' => 'https://github.com/ivo-ivanov/mCore/archive/master.zip',
+			'sslverify' => true,
+			'requires' => '3.0',
+			'tested' => '3.3',
+			'readme' => 'README.md',
+			'access_token' => '',
+		);
+
+		new WP_GitHub_Updater( $config );
+
+	}
+
+}
+
+
+
 ?>
