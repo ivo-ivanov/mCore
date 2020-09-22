@@ -1,0 +1,2 @@
+# mCore
+ WordPress Optimization Plugin
