@@ -1,2 +1,2 @@
 # mCore
- WordPress Optimization Plugin
+ WordPress Optimization Plugin :rocket:
