@@ -2,7 +2,7 @@
 
 [![webzino](https://raw.githubusercontent.com/ivo-ivanov/mCore/master/mcore-presentation.jpg)](https://www.webzino.com)
 
-mCore is a lightweight web performance plugin. It increases the speed of your site by reducing HTTP requests and stripping out unnecessary code. It is designed to work alongside your caching plugin.
+mCore is a lightweight WordPress performance plugin. It increases the speed of your site by reducing HTTP requests and stripping out unnecessary code. It is designed to work alongside your caching plugin.
 
 ## Features
 - Remove Unnecessary Code from wp_head()
